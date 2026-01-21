@@ -18,7 +18,7 @@ body {
 }
 
 body {
-	@apply bg-bg text-text overflow-hidden;
+	@apply bg-bg text-text overflow-x-hidden overflow-y-auto;
 	font-family: var(--font-family-display);
 }
 
@@ -70,6 +70,10 @@ body {
 
 .animate-float {
 	animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fade {
+	animation: fade-in 1s ease-out backwards, float 6s ease-in-out 1s infinite;
 }
 
 .animate-gradient {
