@@ -62,4 +62,7 @@ async function optimizeImages() {
 	console.log('\n✨ Optimization complete!');
 }
 
-optimizeImages().catch(console.error);
+optimizeImages().catch((error) => {
+	console.error('Image optimization failed:', error);
+	process.exit(1);
+});

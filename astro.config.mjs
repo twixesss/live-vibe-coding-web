@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://vibec.uk',
+  output: 'static',
+  trailingSlash: 'ignore',
   vite: {
     plugins: [tailwindcss()]
   }
