@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Custom Theme */
+@theme {
+	--color-bg: #050507;
+	--color-text: #ffffff;
+	--color-muted: rgba(255, 255, 255, 0.5);
+	--color-gradient-start: #8B5CF6;
+	--color-gradient-mid: #06B6D4;
+	--color-gradient-end: #EC4899;
+	--font-family-display: 'Outfit', sans-serif;
+}
+
+/* Base Styles */
+html,
+body {
+	@apply h-full;
+}
+
+body {
+	@apply bg-bg text-text overflow-hidden;
+	font-family: var(--font-family-display);
+}
+
+/* Unicorn Studio Background */
+#us-background {
+	@apply fixed inset-0 z-0;
+}
+
+#us-background canvas {
+	@apply w-full h-full;
+}
+
+/* Animations */
+@keyframes float {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes gradient-shift {
+
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+	background-size: 200% 200%;
+	animation: gradient-shift 8s ease infinite;
+}
+
+.animate-fade-in {
+	animation: fade-in 1s ease-out backwards;
+}
+
+.delay-1 {
+	animation-delay: 0.2s;
+}
+
+.delay-2 {
+	animation-delay: 0.4s;
+}
+
+.delay-3 {
+	animation-delay: 0.6s;
+}
