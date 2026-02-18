@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
-/* Custom Theme */
+/* Toriyama Akira Style Theme */
 @theme {
-	--color-bg: #050507;
+	--color-bg: #1a0a2e;
 	--color-text: #ffffff;
-	--color-muted: rgba(255, 255, 255, 0.5);
-	--color-gradient-start: #8B5CF6;
-	--color-gradient-mid: #06B6D4;
-	--color-gradient-end: #EC4899;
+	--color-muted: rgba(255, 255, 255, 0.6);
+	--color-db-orange: #FF6B00;
+	--color-db-yellow: #FFD600;
+	--color-db-blue: #0066FF;
+	--color-db-red: #FF1744;
+	--color-db-cyan: #00E5FF;
+	--color-db-purple: #AA00FF;
 	--font-family-display: 'Outfit', sans-serif;
 }
 
@@ -31,26 +34,119 @@ body {
 	@apply w-full h-full;
 }
 
+/* Speed Lines Background */
+.speed-lines {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.speed-lines::before,
+.speed-lines::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200%;
+	height: 200%;
+	transform: translate(-50%, -50%);
+}
+
+.speed-lines::before {
+	background: repeating-conic-gradient(
+		from 0deg,
+		transparent 0deg 8deg,
+		currentColor 8deg 10deg
+	);
+	color: rgba(255, 107, 0, 0.06);
+	animation: speed-rotate 30s linear infinite, speed-color-1 6s ease-in-out infinite;
+}
+
+.speed-lines::after {
+	background: repeating-conic-gradient(
+		from 5deg,
+		transparent 0deg 12deg,
+		currentColor 12deg 14deg
+	);
+	color: rgba(255, 214, 0, 0.04);
+	animation: speed-rotate 45s linear infinite reverse, speed-color-2 8s ease-in-out infinite;
+}
+
+/* Ki Energy Aura */
+.ki-aura {
+	position: relative;
+}
+
+.ki-aura::before {
+	content: '';
+	position: absolute;
+	inset: -20px;
+	border-radius: 50%;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(255, 214, 0, 0.3) 0%,
+		rgba(255, 107, 0, 0.15) 30%,
+		rgba(255, 23, 68, 0.05) 60%,
+		transparent 70%
+	);
+	animation: ki-pulse 2s ease-in-out infinite;
+	pointer-events: none;
+}
+
+/* Power Burst */
+.power-burst {
+	position: relative;
+}
+
+.power-burst::after {
+	content: '';
+	position: absolute;
+	inset: -4px;
+	background: linear-gradient(45deg, #FF6B00, #FFD600, #FF1744, #FF6B00);
+	background-size: 300% 300%;
+	border-radius: inherit;
+	z-index: -1;
+	animation: power-shift 3s ease infinite;
+	filter: blur(8px);
+	opacity: 0.6;
+}
+
+/* Manga Panel Border */
+.manga-border {
+	border: 3px solid #ffffff;
+	box-shadow:
+		4px 4px 0 0 #000000,
+		inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Impact Text Style */
+.impact-text {
+	text-shadow:
+		3px 3px 0 #000,
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		0 4px 0 rgba(0, 0, 0, 0.3);
+	letter-spacing: -0.02em;
+}
+
 /* Animations */
 @keyframes float {
-
 	0%,
 	100% {
 		transform: translateY(0);
 	}
-
 	50% {
 		transform: translateY(-10px);
 	}
 }
 
 @keyframes gradient-shift {
-
 	0%,
 	100% {
 		background-position: 0% 50%;
 	}
-
 	50% {
 		background-position: 100% 50%;
 	}
@@ -61,10 +157,112 @@ body {
 		opacity: 0;
 		transform: translateY(20px);
 	}
-
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@keyframes ki-pulse {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	50% {
+		transform: scale(1.15);
+		opacity: 0.8;
+	}
+}
+
+@keyframes power-shift {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes speed-rotate {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes speed-color-1 {
+	0%, 100% {
+		color: rgba(255, 107, 0, 0.06);
+	}
+	16% {
+		color: rgba(255, 214, 0, 0.08);
+	}
+	33% {
+		color: rgba(255, 23, 68, 0.07);
+	}
+	50% {
+		color: rgba(170, 0, 255, 0.06);
+	}
+	66% {
+		color: rgba(0, 229, 255, 0.07);
+	}
+	83% {
+		color: rgba(0, 102, 255, 0.06);
+	}
+}
+
+@keyframes speed-color-2 {
+	0%, 100% {
+		color: rgba(255, 214, 0, 0.04);
+	}
+	20% {
+		color: rgba(0, 229, 255, 0.06);
+	}
+	40% {
+		color: rgba(255, 23, 68, 0.05);
+	}
+	60% {
+		color: rgba(0, 102, 255, 0.05);
+	}
+	80% {
+		color: rgba(255, 107, 0, 0.06);
+	}
+}
+
+@keyframes slam-in {
+	0% {
+		opacity: 0;
+		transform: scale(2) rotate(-5deg);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(0.9) rotate(1deg);
+	}
+	80% {
+		transform: scale(1.05) rotate(-0.5deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+@keyframes charge-in {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px) skewX(-10deg);
+	}
+	70% {
+		opacity: 1;
+		transform: translateX(10px) skewX(2deg);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) skewX(0deg);
 	}
 }
 
@@ -73,16 +271,24 @@ body {
 }
 
 .animate-float-fade {
-	animation: fade-in 1s ease-out backwards, float 6s ease-in-out 1s infinite;
+	animation: slam-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards, float 6s ease-in-out 1s infinite;
 }
 
 .animate-gradient {
 	background-size: 200% 200%;
-	animation: gradient-shift 8s ease infinite;
+	animation: gradient-shift 3s ease infinite;
 }
 
 .animate-fade-in {
 	animation: fade-in 1s ease-out backwards;
+}
+
+.animate-slam {
+	animation: slam-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.animate-charge {
+	animation: charge-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 .delay-1 {
@@ -95,4 +301,12 @@ body {
 
 .delay-3 {
 	animation-delay: 0.6s;
+}
+
+.delay-4 {
+	animation-delay: 0.8s;
+}
+
+.delay-5 {
+	animation-delay: 1.0s;
 }
