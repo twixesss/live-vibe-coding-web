@@ -54,7 +54,7 @@ import '../styles/global.css'
         <!-- Title - Impact Style -->
         <h1 class="impact-text text-5xl md:text-7xl lg:text-9xl font-black leading-none tracking-tighter uppercase animate-slam delay-2">
             <span class="block text-db-yellow drop-shadow-[0_0_20px_rgba(255,214,0,0.4)]">Live Vibe</span>
-            <span class="block bg-gradient-to-r from-db-orange via-db-red to-db-yellow bg-clip-text text-transparent animate-gradient">
+            <span class="block gradient-text bg-gradient-to-r from-db-orange via-db-red to-db-yellow bg-clip-text text-transparent animate-gradient">
                 Coding Club
             </span>
         </h1>
@@ -94,80 +94,114 @@ import '../styles/global.css'
         </div>
     </section>
 
-    <!-- Upcoming Events -->
+    <!-- Events -->
     <section class="relative z-10 py-24 px-6">
         <div class="max-w-4xl mx-auto">
             <!-- Section Title - Manga Style -->
             <div class="text-center mb-16">
                 <h2 class="impact-text text-4xl md:text-6xl font-black tracking-tight uppercase animate-slam">
-                    <span class="text-db-yellow">Upcoming</span>
-                    <span class="bg-gradient-to-r from-db-orange to-db-red bg-clip-text text-transparent animate-gradient"> Events</span>
+                    <span class="gradient-text bg-gradient-to-r from-db-orange to-db-red bg-clip-text text-transparent animate-gradient">Events</span>
                 </h2>
                 <div class="mt-4 h-1 w-32 mx-auto bg-gradient-to-r from-db-orange via-db-yellow to-db-red rounded-full"></div>
             </div>
 
-            <div class="flex flex-col gap-8">
-                <!-- Event 1: Next - Power Card -->
-                <div class="group relative manga-border bg-gradient-to-br from-db-orange/10 to-db-red/5 backdrop-blur-md rounded-xl p-6 md:p-8 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(255,107,0,0.3)]">
-                    <!-- NEXT Badge -->
-                    <div class="absolute -top-3 -right-2 px-4 py-1.5 text-sm font-black text-black bg-db-yellow rounded-lg manga-border rotate-3 shadow-lg">
-                        NEXT!!
+            <!-- Past Events -->
+            <h3 class="text-xl md:text-2xl font-black text-db-yellow uppercase tracking-wider mb-6 impact-text">Past Events</h3>
+            <div class="flex flex-col gap-6 mb-16">
+                <!-- Vol.2: Live Vibe Coding — AI x Arts (2026.2.18) -->
+                <a href="https://luma.com/cf43iqj0" target="_blank" rel="noopener noreferrer" class="group relative manga-border bg-gradient-to-br from-db-orange/10 to-db-red/5 backdrop-blur-md rounded-xl p-6 md:p-8 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(255,107,0,0.3)] block no-underline">
+                    <div class="absolute -top-3 -right-2 px-3 py-1 text-xs font-black text-black bg-db-cyan rounded-lg manga-border rotate-3 shadow-lg">
+                        ENDED
                     </div>
                     <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <div class="text-sm text-db-cyan font-bold uppercase tracking-wider">2026</div>
                             <div class="text-5xl font-black text-db-orange impact-text">2.18</div>
-                            <div class="text-sm text-db-yellow font-bold">TUE 19:00</div>
+                            <div class="text-sm text-db-yellow font-bold">WED 19:00</div>
                         </div>
                         <div class="flex-1">
                             <div class="text-xs text-db-cyan font-black tracking-widest mb-1 uppercase">Vol.2</div>
-                            <h3 class="text-2xl md:text-3xl font-black mb-2 impact-text">Live Vibe Coding<br class="md:hidden"> — AI x Arts</h3>
-                            <p class="text-sm text-muted leading-relaxed">AIとコードで、創造の限界を超える。ライブコーディングとアートが融合するイベント第2弾。</p>
+                            <h4 class="text-2xl md:text-3xl font-black mb-2 impact-text text-white">Live Vibe Coding<br class="md:hidden"> — AI x Arts</h4>
+                            <p class="text-sm text-muted leading-relaxed">AIエンジニアがライブコーディングでアートを生成。音楽とドリンクを楽しみながら、コードと創造性が交差するエンタメイベント。11名が参加。</p>
                         </div>
                         <div class="flex-shrink-0">
                             <div class="inline-block px-4 py-2 bg-db-blue/20 border-2 border-db-blue/40 rounded-lg text-sm text-db-cyan font-bold">
-                                GUILD Valley
+                                GUILD Valley, 渋谷
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Vol.0: Live Vibe Coding Vol.0 (2025.9) -->
+                <div class="group relative manga-border bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(170,0,255,0.2)]">
+                    <div class="absolute -top-3 -right-2 px-3 py-1 text-xs font-black text-black bg-db-purple rounded-lg manga-border rotate-3 shadow-lg">
+                        INVITE ONLY
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                        <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="text-sm text-db-cyan font-bold uppercase tracking-wider">2025</div>
+                            <div class="text-5xl font-black text-db-purple impact-text">9</div>
+                            <div class="text-sm text-muted font-bold">招待制</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-db-purple font-black tracking-widest mb-1 uppercase">Vol.0</div>
+                            <h4 class="text-2xl md:text-3xl font-black mb-2 impact-text text-white">Live Vibe Coding<br class="md:hidden"> Vol.0</h4>
+                            <p class="text-sm text-muted leading-relaxed">すべてはここから始まった。招待制で開催されたプロトタイプイベント。参加者から「この体験は前例がない」と好評を博し、Vol.2以降の公開開催につながった。</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <div class="inline-block px-4 py-2 bg-db-purple/20 border-2 border-db-purple/40 rounded-lg text-sm text-db-purple font-bold">
+                                Plug and Play, 渋谷
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Event 2 -->
-                <div class="group relative manga-border bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,214,0,0.2)]">
+            <!-- Coming Soon -->
+            <h3 class="text-xl md:text-2xl font-black text-db-cyan uppercase tracking-wider mb-6 impact-text">Coming Soon</h3>
+            <div class="flex flex-col gap-6">
+                <!-- Future Event 1 -->
+                <div class="group relative manga-border bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 opacity-70 transition-all duration-200 hover:opacity-90">
+                    <div class="absolute -top-3 -right-2 px-3 py-1 text-xs font-black text-black bg-db-yellow rounded-lg manga-border rotate-3 shadow-lg animate-float">
+                        COMING SOON
+                    </div>
                     <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                         <div class="flex-shrink-0 text-center md:text-left">
-                            <div class="text-sm text-db-cyan font-bold uppercase tracking-wider">2026</div>
-                            <div class="text-5xl font-black text-white impact-text">4.15</div>
-                            <div class="text-sm text-muted font-bold">WED 19:00</div>
+                            <div class="text-sm text-muted font-bold uppercase tracking-wider">2026</div>
+                            <div class="text-5xl font-black text-white/30 impact-text">?.??</div>
+                            <div class="text-sm text-muted font-bold">TBD</div>
                         </div>
                         <div class="flex-1">
-                            <div class="text-xs text-db-cyan font-black tracking-widest mb-1 uppercase">Vol.3</div>
-                            <h3 class="text-2xl md:text-3xl font-black mb-2 impact-text">Live Vibe Coding<br class="md:hidden"> — AI x Music</h3>
-                            <p class="text-sm text-muted leading-relaxed">AIで音楽を生成し、リアルタイムでコードと音が交差する新体験。</p>
+                            <div class="text-xs text-db-cyan/50 font-black tracking-widest mb-1 uppercase">Vol.3</div>
+                            <h4 class="text-2xl md:text-3xl font-black mb-2 impact-text text-white/40">Live Vibe Coding<br class="md:hidden"> — ???</h4>
+                            <p class="text-sm text-muted/60 leading-relaxed">次回テーマは企画中... 最新情報はDiscordで発信します。</p>
                         </div>
                         <div class="flex-shrink-0">
-                            <div class="inline-block px-4 py-2 bg-white/5 border-2 border-white/20 rounded-lg text-sm text-muted font-bold">
+                            <div class="inline-block px-4 py-2 bg-white/5 border-2 border-white/10 rounded-lg text-sm text-muted/50 font-bold border-dashed">
                                 TBD
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event 3 -->
-                <div class="group relative manga-border bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,214,0,0.2)]">
+                <!-- Future Event 2 -->
+                <div class="group relative manga-border bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 opacity-70 transition-all duration-200 hover:opacity-90">
+                    <div class="absolute -top-3 -right-2 px-3 py-1 text-xs font-black text-black bg-db-yellow rounded-lg manga-border rotate-3 shadow-lg animate-float">
+                        COMING SOON
+                    </div>
                     <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                         <div class="flex-shrink-0 text-center md:text-left">
-                            <div class="text-sm text-db-cyan font-bold uppercase tracking-wider">2026</div>
-                            <div class="text-5xl font-black text-white impact-text">6.20</div>
-                            <div class="text-sm text-muted font-bold">SAT 18:00</div>
+                            <div class="text-sm text-muted font-bold uppercase tracking-wider">2026</div>
+                            <div class="text-5xl font-black text-white/30 impact-text">?.??</div>
+                            <div class="text-sm text-muted font-bold">TBD</div>
                         </div>
                         <div class="flex-1">
-                            <div class="text-xs text-db-cyan font-black tracking-widest mb-1 uppercase">Vol.4</div>
-                            <h3 class="text-2xl md:text-3xl font-black mb-2 impact-text">Live Vibe Coding<br class="md:hidden"> — AI x Game Dev</h3>
-                            <p class="text-sm text-muted leading-relaxed">AIを使ってその場でゲームを作る。観客参加型のライブゲーム開発。</p>
+                            <div class="text-xs text-db-cyan/50 font-black tracking-widest mb-1 uppercase">Vol.4</div>
+                            <h4 class="text-2xl md:text-3xl font-black mb-2 impact-text text-white/40">Live Vibe Coding<br class="md:hidden"> — ???</h4>
+                            <p class="text-sm text-muted/60 leading-relaxed">テーマ・日程は未定。続報をお待ちください。</p>
                         </div>
                         <div class="flex-shrink-0">
-                            <div class="inline-block px-4 py-2 bg-white/5 border-2 border-white/20 rounded-lg text-sm text-muted font-bold">
+                            <div class="inline-block px-4 py-2 bg-white/5 border-2 border-white/10 rounded-lg text-sm text-muted/50 font-bold border-dashed">
                                 TBD
                             </div>
                         </div>
@@ -177,30 +211,39 @@ import '../styles/global.css'
         </div>
     </section>
 
-    <!-- Cat Cursor Follower -->
-    <div id="cat-cursor" style="position:fixed;pointer-events:none;z-index:9999;font-size:28px;transition:transform 0.15s ease-out;will-change:transform,left,top;">😺</div>
-    <script is:inline>
-        (function() {
-            const cat = document.getElementById('cat-cursor');
-            let mouseX = -100, mouseY = -100;
-            let catX = -100, catY = -100;
-            document.addEventListener('mousemove', function(e) {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-            function animate() {
-                catX += (mouseX - catX) * 0.15;
-                catY += (mouseY - catY) * 0.15;
-                cat.style.left = catX + 'px';
-                cat.style.top = catY + 'px';
-                const dx = mouseX - catX;
-                const scaleX = dx < -1 ? -1 : 1;
-                cat.style.transform = 'translate(-50%, -50%) scaleX(' + scaleX + ')';
-                requestAnimationFrame(animate);
-            }
-            animate();
-        })();
-    </script>
+    <!-- News -->
+    <section class="relative z-10 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="impact-text text-3xl md:text-5xl font-black tracking-tight uppercase animate-slam">
+                    <span class="text-db-yellow">News</span>
+                </h2>
+                <div class="mt-4 h-1 w-24 mx-auto bg-gradient-to-r from-db-yellow to-db-orange rounded-full"></div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a href="https://www.value-press.com/pressrelease/368517" target="_blank" rel="noopener noreferrer" class="group manga-border bg-white/5 backdrop-blur-md rounded-xl p-5 md:p-6 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,214,0,0.2)] block no-underline">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 px-3 py-1 bg-db-red/20 border border-db-red/40 rounded text-xs text-db-red font-black uppercase">
+                            Press
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-muted mb-1">2026.01.27</div>
+                            <p class="text-sm md:text-base font-bold text-white group-hover:text-db-yellow transition-colors leading-relaxed">
+                                「Live Vibe Coding - AI✖️Arts」渋谷にてAIライブアートイベントを2月18日に開催
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0 text-muted group-hover:text-db-yellow transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Unicorn Studio Script -->
     <script is:inline>

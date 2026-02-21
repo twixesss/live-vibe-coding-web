@@ -131,6 +131,11 @@ body {
 	letter-spacing: -0.02em;
 }
 
+/* Gradient text inside impact-text needs shadow removed */
+.impact-text .gradient-text {
+	text-shadow: none;
+}
+
 /* Animations */
 @keyframes float {
 	0%,
