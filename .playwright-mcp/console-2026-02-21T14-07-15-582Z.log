@@ -1,0 +1,5 @@
+[    1171ms] Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'cache')
+    at loadImage (https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js:0:66222)
+    at <anonymous> (https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js:0:137117)
+    at preloadTextures (https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js:0:135170)
+    at <anonymous> (https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js:0:164272)
