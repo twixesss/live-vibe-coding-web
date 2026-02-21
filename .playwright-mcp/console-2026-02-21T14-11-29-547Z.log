@@ -1,0 +1,3 @@
+[     249ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://kit.fontawesome.com/4abd1a66a0.js:0
+[     667ms] [WARNING] Facebookとのセッションが切れていますログインしてください @ https://www.value-press.com/packs/js/application-9974f3fce0861d3c2876.chunk.js:1
+[     680ms] [WARNING] Facebookとのセッションが切れていますログインしてください @ https://www.value-press.com/packs/js/application-9974f3fce0861d3c2876.chunk.js:1
