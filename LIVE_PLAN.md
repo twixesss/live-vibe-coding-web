@@ -66,7 +66,7 @@
 | Kosuke | 大澤 | クリエイティブエンジニア / コードとアートの融合を追求 |
 
 ### SNSリンク
-- Discord: https://discord.gg/DgnBXWmU4q
+- Discord: https://discord.gg/2yWMScqk6S
 - X: https://x.com/lvcc_community
 - GitHub: https://github.com/live-vibe-coding
 
