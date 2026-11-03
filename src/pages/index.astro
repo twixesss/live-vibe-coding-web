@@ -243,21 +243,25 @@ import '../styles/global.css'
 
 
     <!-- Unicorn Studio Script -->
-    <script is:inline>
-        !function(){
-            if(!window.UnicornStudio){
-                window.UnicornStudio={isInitialized:!1};
-                var i=document.createElement("script");
-                i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js";
-                i.onload=function(){
-                    window.UnicornStudio.isInitialized||(
-                        UnicornStudio.init(),
-                        window.UnicornStudio.isInitialized=!0
-                    )
-                };
-                (document.head || document.body).appendChild(i)
-            }
-        }();
+    <!-- is:inline ではなく Astro 処理済みスクリプトにすることで、CSP の script-src 'self' で許可される -->
+    <script>
+        const w = window as any;
+        if (!w.UnicornStudio) {
+            w.UnicornStudio = { isInitialized: false };
+            const i = document.createElement('script');
+            // バージョンを上げる場合は integrity と astro.config.mjs の CSP の URL も更新すること
+            i.src = 'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.2/dist/unicornStudio.umd.js';
+            // SRI: 配信元が改ざんされた場合は読み込みを拒否する
+            i.integrity = 'sha384-SUL4NilkdeOqXh8Be5Y40CBQTWw9cmt240D8k9LKgwoQ8l/LSQdu2sDVAszKlxWC';
+            i.crossOrigin = 'anonymous';
+            i.onload = () => {
+                if (!w.UnicornStudio.isInitialized) {
+                    w.UnicornStudio.init();
+                    w.UnicornStudio.isInitialized = true;
+                }
+            };
+            (document.head || document.body).appendChild(i);
+        }
     </script>
 </body>
 </html>
